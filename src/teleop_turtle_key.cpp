@@ -173,7 +173,7 @@ TeleopTurtle::TeleopTurtle():
   nh_->get_parameter("scale_angular", a_scale_);
   nh_->get_parameter("scale_linear", l_scale_);
 
-  twist_pub_ = nh_->create_publisher<geometry_msgs::msg::Twist>("turtle1/cmd_vel", 1);
+  twist_pub_ = nh_->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 1);
 
 }
 
