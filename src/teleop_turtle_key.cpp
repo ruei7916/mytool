@@ -285,7 +285,8 @@ int TeleopTurtle::keyLoop()
         return 0;
     }
    
-
+    nh_->get_parameter("scale_angular", a_scale_);
+    nh_->get_parameter("scale_linear", l_scale_);
     geometry_msgs::msg::Twist twist;
     twist.angular.z = a_scale_*angular_;
     twist.linear.x = l_scale_*linear_;
