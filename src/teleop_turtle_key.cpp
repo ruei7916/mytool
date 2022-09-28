@@ -294,6 +294,7 @@ int TeleopTurtle::keyLoop()
     if(dirty ==true)
     {
       twist_pub_->publish(twist);    
+      RCLCPP_INFO(nh_->get_logger(),"%f<%f",l_scale_,a_scale_);
       dirty=false;
     }
   }
